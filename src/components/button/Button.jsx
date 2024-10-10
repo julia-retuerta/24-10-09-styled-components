@@ -1,7 +1,11 @@
-const Button = ({ children }) => {
-  // ({ text }) es equivalente a const { text } = props; Lo que estamos haciendo es una desestructuración
+import { StyledButton } from './button.styles';
 
-  return <button>{children}</button>;
+const Button = ({ children, color, padding, rounded, hover }) => {
+  return (
+    <StyledButton $color={color} $padding={padding} $rounded={rounded} $hover={hover}>
+      {children}
+    </StyledButton>
+  );
 };
 
 export default Button;
